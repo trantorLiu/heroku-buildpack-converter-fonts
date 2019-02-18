@@ -4,8 +4,8 @@ BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../fonts"
 TARGET_DIR="$BUILD_DIR/.fonts"
 
-echo "-----> Moving $SOURCE_DIR to $TARGET_DIR"
+echo "-----> Copying $SOURCE_DIR to $TARGET_DIR"
 
-mv "$SOURCE_DIR" "$TARGET_DIR"
+cp -r "$SOURCE_DIR" "$TARGET_DIR"
 
 fc-cache -fv
